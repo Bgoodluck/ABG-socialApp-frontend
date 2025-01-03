@@ -1,4 +1,4 @@
-const backendURL = "http://localhost:8082"
+const backendURL = "https://abg-socialapp-backend.onrender.com"
 
 
 export const summaryApi = {

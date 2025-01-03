@@ -45,7 +45,7 @@ function UserImage({ image, size = "60px" }) {
                width={size}
                height={size}
                alt="user"
-               src={`http://localhost:8082/uploads/${filename}`}
+               src={`https://abg-socialapp-backend.onrender.com/uploads/${filename}`}
               />
         </Box>
     )

@@ -59,7 +59,7 @@ function SinglePostWidget({
         if (path.startsWith('http') || path.startsWith('https')) return path;
         
         const normalizedPath = path.replace(/\\/g, '/').replace('uploads/', '');
-        return `http://localhost:8082/uploads/${normalizedPath}`;
+        return `https://abg-socialapp-backend.onrender.com/uploads/${normalizedPath}`;
     };
 
     const handleLike = async () => {
