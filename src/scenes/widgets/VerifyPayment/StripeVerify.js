@@ -51,14 +51,14 @@ function StripeVerify() {
                 
                 if (responseData.success) {
                     toast.success('Payment successful');
-                    navigate('/');
+                    navigate('/home');
                 } else {
                     throw new Error(responseData.message || 'Payment verification failed');
                 }
             } catch (error) {
                 console.error('Payment verification error:', error);
                 toast.error(error.message);
-                setTimeout(() => navigate('/'), 2000);
+                setTimeout(() => navigate('/home'), 2000);
             } finally {
                 setIsLoading(false);
             }
@@ -75,7 +75,7 @@ function StripeVerify() {
                 } else if (!orderId || !success) {
                     toast.error('Invalid payment verification URL');
                 }
-                navigate('/');
+                navigate('/home');
             }, 2000);
 
             return () => clearTimeout(timeout);
